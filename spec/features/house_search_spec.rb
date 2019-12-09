@@ -3,18 +3,14 @@ require 'rails_helper'
 describe 'As a user on the / when I select Griffindor and search' do
   it 'returns those house members and displays their info on /search' do
     visit '/'
-    select "Griffindor", :from => "options_for_select(hogwarts_houses)"
+    select "Gryffindor"
     click_button 'Search For Members'
 
     expect(current_path).to eq('/search')
-
-    # find capybara/rspec expectaions for number of css elements on a page
-    within ".members" do
-      expect(page).to have_css('name')
-      expect(page).to have_css('role')
-      expect(page).to have_css('house')
-      expect(page).to have_css('patronus')
-    end
+    expect(first('.name').text).to_not be_empty
+    expect(first('.house').text).to_not be_empty
+    expect(page).to have_css('.role')
+    expect(page).to have_css('.patronus')
   end
 end
 
