@@ -1,12 +1,11 @@
-# README
+## Background
 
-Run through the standard Rails setup.
+The Order Of The Phoenix from the Harry Potter Book Series was a secret society founded by Albus Dumbledore to oppose Lord Voldemort and his Death Eaters. The original Order was created in the 1970s. ... The Order disbanded but was reconvened in 1995 after Harry Potter informed Dumbledore of Lord Voldemort's return.
 
-```
-$ bundle install
-$ figaro install
-$ rake db:{create,migrate}
-$ rails s
-```
+## Setup
 
-Navigate to http://localhost:3000
+* Clone this repo
+* `bundle install`
+* `bundle exec figaro install`
+* `rake db:{create,migrate}`
+* `rails s`
